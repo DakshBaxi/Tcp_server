@@ -71,7 +71,6 @@ func handleConn(conn net.Conn, id string, connMap *sync.Map) {
 			// The defer function will handle cleanup and announcement.
 			return
 		}
-
 		// Prepend username to the message and broadcast it
 		message := fmt.Sprintf("%s: %s", username, userInput)
 		broadcastMessage(message, connMap, conn)
